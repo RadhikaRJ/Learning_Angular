@@ -1,0 +1,23 @@
+<p>Type in the inpu box below to observe two way binding:</p>
+<input 
+type="text"
+class="form-control"
+[(ngModel)] = "userInput">
+<p>The display below is String interpolation to view the 2 way binding effect using ngModel:</p>
+<p>{{userInput}}</p>
+
+<p>Below input form is to enable button to be clicked only when user has entered input. <br>
+    Event binding implementation & 2 way binding is used here.
+</p>
+
+<input
+type="text"
+class="form-control"
+[(ngModel)] = "secondInput">
+<p>{{secondInput}}</p>
+
+<button
+class="btn btn-primary"
+[disabled]="secondInput === ''"
+(click) = "onClearInput()"
+>Clear Input</button>
