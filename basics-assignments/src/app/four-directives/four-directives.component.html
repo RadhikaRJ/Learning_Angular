@@ -1,0 +1,11 @@
+<button class="btn btn-primary" (click)="flag = !flag"> Display Details</button>
+<p *ngIf="flag">Welcome to my basics Assignments page</p>
+<button class="btn btn-primary" (click)="onDisplayDetails()"> Display Details 2</button>
+<p *ngIf="flag1">Welcome to my basics Assignments page</p>
+<div *ngFor="let logitem1 of log1; let i = index"
+[ngStyle]="{backgroundColor : i >=4 ? 'skyblue': 'transparent'}"
+[ngClass]="{'whiteText': i >=4}">{{logitem1}}</div>
+<div *ngFor="let logitem of log"
+[ngStyle]="{backgroundColor : logitem >=5 ? 'skyblue': 'transparent'}"
+[ngClass]="{'whiteText': logitem >=5}">{{logitem}}</div>
+
